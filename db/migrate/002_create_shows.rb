@@ -7,7 +7,6 @@ class CreateShows < ActiveRecord::Migration[5.2]
       #primary key of :id is created for us!
       t.string :name
       t.string :day
-      t.integer :network_id
     end
   end
 end
