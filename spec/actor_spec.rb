@@ -43,6 +43,7 @@ describe "Actor" do
     khaleesi = Character.new(:name => "Khaleesi")
     khaleesi.actor = emilia
     got = Show.new(:name => "Game of Thrones")
+
     khaleesi.show = got
     khaleesi.save
 
