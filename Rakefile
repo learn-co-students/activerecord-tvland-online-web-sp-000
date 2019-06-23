@@ -21,6 +21,10 @@ namespace :db do
 
   desc "start console"
   task :console do
+    def reload!
+      load_all 'app'
+    end
+    
     Pry.start
   end
 end
