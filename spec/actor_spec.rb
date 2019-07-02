@@ -70,7 +70,7 @@ describe "Actor" do
     got = Show.new(:name => "Game of Thrones")
     khaleesi.show = got
     khaleesi.save
-
+    
     khaleesi.reload
     expect(emilia.list_roles).to include("Khaleesi - Game of Thrones")
   end
