@@ -7,8 +7,12 @@ class Actor < ActiveRecord::Base
   end
   
   def list_roles
-    character = Character.find_by(actor_id: self.id)
-    "#{character.name} - #{Show.find(character.show_id)}"
+    characters = Character.where(actor_id: self.id)
+    roles = []
+    characters.each {|character|
+      roles << "#{character.name} - #{Show.find(character.show_id).name}"
+    }
+    roles
   end
   
 end
