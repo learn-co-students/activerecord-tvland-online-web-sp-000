@@ -23,4 +23,8 @@ namespace :db do
   task :console do
     Pry.start
   end
+
 end
+
+require "rails_erd/diagram/graphviz" 
+RailsERD::Diagram::Graphviz.create
