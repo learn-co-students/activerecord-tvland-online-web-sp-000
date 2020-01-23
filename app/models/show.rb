@@ -17,7 +17,7 @@ class Show < ActiveRecord::Base
   def network
     self.save
     self.network_id = self.id
-    Network.where(id: self.network_id)
+    Network.where(id: self.network_id).first
   end
 
 end
