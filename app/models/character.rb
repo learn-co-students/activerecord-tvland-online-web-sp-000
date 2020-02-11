@@ -14,7 +14,4 @@ class Character < ActiveRecord::Base
     # binding.pry
   end 
   
-  # def build_network
-  #   binding.pry
-  # end 
 end
