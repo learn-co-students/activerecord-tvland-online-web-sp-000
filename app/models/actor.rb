@@ -5,9 +5,24 @@ class Actor < ActiveRecord::Base
    def full_name
       "#{self.first_name} #{self.last_name}"
    end 
+   
+   def list_characters 
+     character = nil 
+     self.characters.select do |c|
+       character = c.name 
+     end 
+     character 
+   end 
+   
+   def list_shows 
+     show = nil 
+     self.shows.each do |s|
+       show = s.name 
+     end 
+     show 
+   end 
 
    def list_roles 
-     #binding.pry
-      "#{self.characters.first} - #{self.shows.first}"
+     ["#{list_characters} - #{list_shows}"]
    end 
 end
