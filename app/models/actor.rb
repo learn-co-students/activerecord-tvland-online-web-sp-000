@@ -8,13 +8,8 @@ class Actor < ActiveRecord::Base
     end
 
     def list_roles
-        # binding.pry 
         # self.shows.map {|a| "#{a.characters}" "-" "#{a.name}" }
-       self.shows.map {|a| "#{a.characters}" " - " "#{a.name}" }
-      # self.each do |a| "#{a.name}" "-" "#{a.characters}"
-
-      # "-" "#{self.shows}"
-
+        self.characters.map {|a| "#{a.name}" " - " "#{a.show.name}"   }
     end
 
 end
