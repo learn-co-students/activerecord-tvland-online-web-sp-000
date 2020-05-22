@@ -9,10 +9,10 @@ class Actor < ActiveRecord::Base
 
     def list_roles
         #lists all of the characters that actor has alongside the show that the character is in
-        #"Khaleesi - Game of Thrones"
-        self.characters.map do |character| 
-            puts "#{character.name} - #{self.shows}"
-        end
+        
+        character_name = self.characters.map {|character| character.name}.join("")
+        show_name = self.shows.map {|show| show.name}.join("")
+        list_role = "#{character_name} - #{show_name}"
         # binding.pry
     end
   
