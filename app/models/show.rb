@@ -6,6 +6,7 @@ class Show < ActiveRecord::Base
   def build_network(letters={})
   a = Network.create(call_letters: "#{letters.values[0]}")
   self.network_id = a.id
+  binding.pry
 end
 
   def actors_list
