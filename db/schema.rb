@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 5) do
     t.text "name"
     t.integer "actor_id"
     t.integer "show_id"
+    t.string "catchphrase"
   end
 
   create_table "networks", force: :cascade do |t|
