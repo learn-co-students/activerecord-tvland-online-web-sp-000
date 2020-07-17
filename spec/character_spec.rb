@@ -19,14 +19,14 @@ describe Character do
     niles = Character.new(name: "Niles Crane")
     niles.show = frasier
     niles.save
-    
+
     frasier.reload
     expect(frasier.characters).to include(niles)
     expect(niles.show).to eq(frasier)
   end
 
   it "has a catchphrase" do
-    
+
     urkel = Character.new(name: "Steve Urkel")
     urkel.catchphrase = "Did I do that?"
     urkel.save
@@ -44,6 +44,7 @@ describe Character do
 
   it "can chain-build associations to which it belongs" do
     malcolm = Character.new(name: "Malcolm Reynolds")
+    # binding.pry
     malcolm.build_show(name: "Firefly").build_network(:call_letters => "Fox")
     show = malcolm.show
     expect(show.name).to eq("Firefly")
