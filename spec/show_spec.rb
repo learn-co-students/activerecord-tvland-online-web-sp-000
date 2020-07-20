@@ -9,6 +9,7 @@ describe Show do
     expect(community.season).to eq("Winter")
   end
 
+
   it "has many characters in an array" do
     show.name = "The Simpsons"
     characters = [

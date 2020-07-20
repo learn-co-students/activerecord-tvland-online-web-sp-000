@@ -1,3 +1,4 @@
+  
 class Network < ActiveRecord::Base
   has_many :shows
 
@@ -5,3 +6,5 @@ class Network < ActiveRecord::Base
     "We're sorry about passing on John Mulaney's pilot"
   end
 end
+
+
