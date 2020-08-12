@@ -1,4 +1,5 @@
 class Network < ActiveRecord::Base
+  attr_accessor :call_letters
   has_many :shows
 
   def sorry

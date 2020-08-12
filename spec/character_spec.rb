@@ -46,6 +46,7 @@ describe Character do
     malcolm = Character.new(name: "Malcolm Reynolds")
     malcolm.build_show(name: "Firefly").build_network(:call_letters => "Fox")
     show = malcolm.show
+    # binding.pry
     expect(show.name).to eq("Firefly")
     expect(show.network.call_letters).to eq("Fox")
   end
