@@ -1,6 +1,7 @@
 require_relative 'config/environment.rb'
 require "sinatra/activerecord/rake"
 
+
 namespace :db do
 
   desc "Migrate the db"
