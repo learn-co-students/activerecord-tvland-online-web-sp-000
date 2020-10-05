@@ -9,6 +9,8 @@ class Show < ActiveRecord::Base
         #     character.actor.full_name
         # end
 
+        # Note to self: if you're going through one array to get to another, set up has_many_through
+
         self.actors.map { |actor| actor.full_name }
     end
 end
