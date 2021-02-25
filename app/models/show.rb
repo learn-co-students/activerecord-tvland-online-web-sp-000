@@ -1,21 +1,13 @@
 class Show < ActiveRecord::Base
     has_many :characters
     belongs_to :network
+    has_many :actors, through: :characters
 
 
-    def build_network(show)
-        # binding.pry
-        Network.create(show)
+
+    def actors_list
+        actors.collect{|a| a.full_name}
+
     end
-
-
-    # def actors_list
-    #     shows = Actor.all.collect do |s|
-    #         s.show == self
-    #     end
-    #     shows.collect do |c|
-    #         c.full_name
-    #     end
-    # end
   
 end
