@@ -31,6 +31,7 @@ describe Show do
     show.save
 
     expect(show.actors_list.length).to eq(1)
+    puts show.actors_list.include?('Andrew Lincoln')
     expect(show.actors_list).to include('Andrew Lincoln')
 
   end
